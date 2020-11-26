@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+    /* overflow: auto; */
+    margin-left: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.flex-container
+{
+    display: flex;
+}
+
+.container1 {
+    flex: 50%;
+    margin-top: 15px;
+    margin-left: 25px;
+}
+
+.container2 {
+    height: 700px;
+    background-color: #eaeaea;
+    flex: 50%;
+}
+
+.wrap {
+    margin-top: 40px;
+}
+
+.one 
+{
+    margin-top: 50px;
+    line-height: 0.4;
+}
+
+.two
+{
+    margin-top: 50px;
+}
+
+.button2 {
+    background-color: rgba(0, 0, 255, 0.9);
+    padding: 10px 40px;
+}
+
+.three
+{
+    margin-top: 90px;
+}
+
+.container2
+{
+    overflow: hidden;
+}
+
+.wname span 
+{
+    display: block;
+}
+
+.tab1 th
+{
+    padding-bottom: 50px;
+    font-weight: 100;
+}
+
+.tab2 th
+{
+    padding-bottom: 60px;
+}
+
+.amount td{
+    padding-bottom: 20px;
+}
+
+.delivery
+{
+    margin-bottom: 20px;
+}
+
+.pagef
+{
+    margin-left: 100px;
+    padding-top: 50px;
+}
+
+.pagef a
+{
+    padding-left: 40%;
+}
+
+.pagef i
+{
+    margin-left: 40px;
+}
+
+@media only screen and (max-width: 800px) {  
+    .flex-container.container1.container2.field
+    {  
+          flex-wrap: wrap;
+    }  
+}  
