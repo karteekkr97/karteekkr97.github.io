@@ -104,7 +104,7 @@ function validate() {
         return false
     }
     else if (res7.length > 6) {
-        document.getElementById("msg6").innerHTML = "**Zip code should have max 6 digits"
+        document.getElementById("msg6").innerHTML = "*Zip code should have max 6 digits"
     }
 
 
