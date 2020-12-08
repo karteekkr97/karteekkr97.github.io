@@ -1,17 +1,15 @@
 * {
     box-sizing: border-box;
     /* overflow: auto; */
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.flex-container
-{
+.flex-container {
     display: flex;
 }
 
 .container1 {
     flex: 50%;
-    padding-left: 40px;
 }
 
 .container2 {
@@ -20,90 +18,80 @@
     flex: 50%;
 }
 
-.one 
-{
+.one {
     margin-top: 50px;
 }
 
-.two
-{
+.two {
     line-height: 0.4;
     margin-top: 50px;
 }
 
-.three 
-{
+.three {
     margin-top: 50px;
 }
 
-
-.button2
-{
+.button2 {
     background-color: rgba(0, 0, 255, 0.9);
     padding: 10px 40px;
     margin-left: 40%;
 }
 
-.four
-{
+.four {
     margin-top: 50px;
 }
 
-.five
-{
+.five {
     margin-top: 50px;
 }
 
- .container2
-{
-    overflow: hidden;
-} 
-
-.wname span 
-{
+.wname span {
     display: block;
 }
 
-.row1 th
-{
+.row1 th {
     padding-bottom: 50px;
     font-weight: 100;
 }
 
-.row2 th
-{
+.row2 th {
     padding-bottom: 60px;
 }
 
-.row3 td{
+.row3 td {
     padding-bottom: 20px;
 }
 
-.page
-{
+.page {
     /* margin-left: 100px; */
     padding-top: 20px;
-    margin-left: 46px;
+    /* margin-left: 46px; */
 }
 
-.page a
-{
+.page a {
     padding-left: 40%;
 }
 
-.page i
-{
+.page i {
     margin-left: 40px;
 }
 
-@media only screen and (max-width: 800px) {  
-    .flex-container,.container1,.container2,.field
-    {  
-          flex-wrap: wrap;
-    }  
-    .button2
-    {
+@media only screen and (max-width: 800px) {
+    .flex-container,
+    .container1,
+    .container2,
+    .field {
+        flex-wrap: wrap;
+    }
+    .button2 {
         margin: 0;
+        /* display: block; */
+    }
+    .five {
+        margin: 90px 0px;
+    }
+    .pagef a {
+        padding: 0;
         display: block;
     }
-}  
+}
