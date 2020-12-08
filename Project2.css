@@ -5,35 +5,30 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.flex-container
-{
+.flex-container {
     display: flex;
 }
 
 .container1 {
     flex: 50%;
-    padding-left: 40px;
 }
 
 .container2 {
     /* height: 700px; */
     background-color: #eaeaea;
     flex: 50%;
-   
 }
 
 .wrap {
     margin-top: 40px;
 }
 
-.one 
-{
+.one {
     margin-top: 50px;
     line-height: 0.4;
 }
 
-.two
-{
+.two {
     margin-top: 50px;
 }
 
@@ -43,61 +38,60 @@
     margin-left: 40%;
 }
 
-.three
-{
+.three {
     margin-top: 90px;
 }
 
-.container2
-{
+.container2 {
     overflow: hidden;
 }
 
-.tab1 th
-{
+.tab1 th {
     padding-bottom: 50px;
     font-weight: 100;
 }
 
-.tab2 th
-{
+.tab2 th {
     padding-bottom: 60px;
 }
 
-.amount td{
+.amount td {
     padding-bottom: 20px;
 }
 
-.delivery
-{
+.delivery {
     margin-bottom: 20px;
 }
 
-.pagef
-{
+.pagef {
     /* margin-left: 100px; */
     padding-top: 20px;
-    margin-left: 46px;
+    /* margin-left: 46px; */
 }
 
-.pagef a
-{
+.pagef a {
     padding-left: 40%;
 }
 
-.pagef i
-{
+.pagef i {
     margin-left: 40px;
 }
 
-@media only screen and (max-width: 800px) {  
-    .flex-container,.container1,.container2,.field
-    {  
-          flex-wrap: wrap;
-    }  
-    .button2
-    {
+@media only screen and (max-width: 800px) {
+    .flex-container,
+    .container1,
+    .container2,
+    .field {
+        flex-wrap: wrap;
+    }
+    .button2 {
         margin: 0;
+    }
+    .three {
+        margin: 90px 0px;
+    }
+    .pagef a {
+        padding: 0;
         display: block;
     }
-}  
+}
