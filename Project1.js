@@ -1,124 +1,78 @@
-function validate() {
-    var res = document.getElementById("one").value
-    if (res.length == 0) {
-        document.getElementById("msg").innerHTML = "**Please fill the firstname text box"
-        return false
-    }
-    else if (res.length < 3) {
-        document.getElementById("msg").innerHTML = "**Firstname should have min 3 letters"
-        return false
-    }
-    else if (res.length >= 15) {
-        document.getElementById("msg").innerHTML = "**Firstname should have max 15 letters"
-        return false
-    }
+let inputs = document.getElementsByClassName('input-name');
+let phone = document.getElementById('phno');
+let email = document.getElementById('mail');
+let zipcode = document.getElementById('zip');
+let selectItem = document.getElementsByClassName('select');
 
 
-    var res1 = document.getElementById("two").value
-    if (res1.length == 0) {
-        document.getElementById("msg1").innerHTML = "**Please fill the lastname text box"
-        return false
-    }
-    else if (res1.length < 3) {
-        document.getElementById("msg1").innerHTML = "**Lastname should have min 3 letters"
-        return false
-    }
-    else if (res1.length >= 15) {
-        document.getElementById("msg1").innerHTML = "**Lastname should have max 15 letters"
-        return false
-    }
 
+for (var i = 0; i < inputs.length; i++) {
+    inputs[i].addEventListener('input', (e) => {
+        if (e.target.value.length < 3 || e.target.value.length > 15) {
+            e.target.nextElementSibling.innerHTML = "Minimun of 3-15 characters are required";
+            return false;
+        } else if (e.target.value.length > 3 || e.target.value.length <= 15) {
+            e.target.nextElementSibling.innerHTML = "";
+            return true;
+        }
+    })
+}
 
-    var res3 = document.getElementById("three").value
-    if (res3.length == 0) {
-        document.getElementById("msg2").innerHTML = "**Please enter phone number"
-        return false
-    }
-    else if (isNaN(res3)) {
-        document.getElementById("msg2").innerHTML = "**Phone number should contain only digits "
-        return false
-    }
-    else if (res3.length < 10) {
-        document.getElementById("msg2").innerHTML = "**Phone number has less than 10 numbers"
-        return false
-    }
-    else if (res3.length > 10) {
-        document.getElementById("msg2").innerHTML = "**Phone number has more than 10 numbers"
-        return false
-    }
-    else if (res3.charAt(0) < 6) {
-        document.getElementById("msg2").innerHTML = "**Phone number should start from onlt 6 or 7 or 8 or 9 numbers"
-        return false
-    }
-
-
-    var res4 = document.getElementById("four");
-    var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-    if (!filter.test(res4.value)) {
-        alert('Please provide a valid email address');
-        email.focus;
+phone.addEventListener('input', (e) => {
+    if (e.target.value == "") {
+        e.target.nextElementSibling.innerHTML = "Please enter your phone number";
         return false;
+    } else if (e.target.value != "") {
+        var phoneno = /^[0-9]{10}$/;
+        if (!phoneno.test(e.target.value)) {
+            e.target.nextElementSibling.innerHTML = "Please enter a valid phone number";
+            return false;
+        } else {
+            e.target.nextElementSibling.innerHTML = "";
+            return true;
+        }
     }
 
+})
+email.addEventListener('input', (e) => {
+    if (e.target.value == "") {
+        e.target.nextElementSibling.innerHTML = "Please enter a valid e-mail address.";
+        return false;
+    } else if (email.value != "") {
+        var emailformat = /^[a-zA-Z0-9.!#$%&'+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)$/;
+        if (!emailformat.test(e.target.value)) {
+            e.target.nextElementSibling.innerHTML = "Please enter a valid email address";
+            return false;
+        } else {
+            e.target.nextElementSibling.innerHTML = "";
+            return true;
+        }
+    }
+})
+zipcode.addEventListener('input', (e) => {
+    if (e.target.value == "") {
+        e.target.nextElementSibling.innerHTML = "Please enter your zipcode";
+        return false;
+    } else if (e.target.value != "") {
+        var zip = /^[0-9]{6}$/;
+        if (!zip.test(e.target.value)) {
+            e.target.nextElementSibling.innerHTML = "Please enter a valid zipcode";
+            return false;
+        } else {
+            e.target.nextElementSibling.innerHTML = "";
+            return true;
+        }
+    }
+})
 
-    var res5 = document.getElementById("five").value
-    if (res5.length == 0) {
-        document.getElementById("msg4").innerHTML = "**Please fill the Address1 text box"
-        return false
-    }
-    else if (res5.length < 3) {
-        document.getElementById("msg4").innerHTML = "**Address1 should have min 3 letters"
-        return false
-    }
-    else if (res5.length >= 15) {
-        document.getElementById("msg4").innerHTML = "**Address1 should have max 15 letters"
-        return false
-    }
-
-    var res6 = document.getElementById("six").value
-    if (res6.length == 0) {
-        document.getElementById("msg5").innerHTML = "**Please fill the Address2 text box"
-        return false
-    }
-    else if (res6.length < 3) {
-        document.getElementById("msg5").innerHTML = "**Address2 should have min 3 letters"
-        return false
-    }
-    else if (res6.length >= 15) {
-        document.getElementById("msg5").innerHTML = "**Address2 should have max 15 letters"
-        return false
-    }
-
-
-    var res7 = document.getElementById("seven").value
-    if (res7.length == 0) {
-        document.getElementById("msg6").innerHTML = "**Please fill the zip code box"
-        return false
-    }
-    else if (isNaN(res7)) {
-        document.getElementById("msg6").innerHTML = "**Zip code should contain only digits"
-        return false
-    }
-    else if (res7.length < 6) {
-        document.getElementById("msg6").innerHTML = "**Zip code should have min 6 digits"
-        return false
-    }
-    else if (res7.length > 6) {
-        document.getElementById("msg6").innerHTML = "*Zip code should have max 6 digits"
-    }
-
-
-    var res8 = document.getElementById("eight").value
-    if (res8.length == 0) {
-        document.getElementById("msg7").innerHTML = "**Please fill the city text box"
-        return false
-    }
-    else if (res8.length < 3) {
-        document.getElementById("msg7").innerHTML = "**City should have min 3 letters"
-        return false
-    }
-    else if (res8.length >= 15) {
-        document.getElementById("msg7").innerHTML = "**City should have max 15 letters"
-        return false
-    }
+for (var i = 0; i < selectItem.length; i++) {
+    selectItem[i].addEventListener('click', (e) => {
+        if (e.target.value == "") {
+            e.target.nextElementSibling.innerHTML = "Please select an option";
+            return false;
+        } else {
+            e.target.nextElementSibling.innerHTML = "";
+            return true;
+        }
+    })
 }
